@@ -5,11 +5,11 @@ This is a small client-server application where:
 
   Back-End: JSON Server
 
-To install: npm instal
+1: npm instal
 
-To build: npm run build
+2: npm run build
 
-To start: npm start
+3: npm start
 
-Then go to the /dist/index.ntml 
+4: open in browser [project path]/dist/index.ntml 
 
