@@ -1,0 +1,151 @@
+{
+  "Departments": {
+    "columns": [
+      {
+        "num": 1,
+        "name": "id",
+        "title": "№",
+        "type": "number",
+        "editable": false,
+        "width": 78
+      },
+      {
+        "num": 2,
+        "name": "name",
+        "title": "Department",
+        "type": "string",
+        "editable": true,
+        "width": 279
+      }
+    ],
+    "data": [
+      {
+        "id": 5,
+        "name": "Administrative",
+        "select": false
+      },
+      {
+        "id": 6,
+        "name": "Finance"
+      },
+      {
+        "id": 4,
+        "name": "Purchase"
+      },
+      {
+        "id": 2,
+        "name": "Sale",
+        "select": false
+      }
+    ],
+    "edit": {
+      "id": 6,
+      "name": "name"
+    },
+    "saving": false,
+    "sort": {
+      "type": "asc",
+      "colName": "name"
+    }
+  },
+  "Employees": {
+    "columns": [
+      {
+        "num": 1,
+        "name": "id",
+        "title": "№",
+        "type": "number",
+        "editable": false,
+        "width": 64
+      },
+      {
+        "num": 2,
+        "name": "firstName",
+        "title": "First Name",
+        "type": "string",
+        "editable": true,
+        "width": 152
+      },
+      {
+        "num": 3,
+        "name": "lastName",
+        "title": "Last Name",
+        "type": "string",
+        "editable": true,
+        "width": 222
+      },
+      {
+        "num": 4,
+        "name": "birthday",
+        "title": "Birthday",
+        "type": "date",
+        "editable": true,
+        "width": 125
+      },
+      {
+        "num": 5,
+        "name": "phone",
+        "title": "Phone",
+        "type": "string",
+        "editable": true,
+        "width": 138
+      },
+      {
+        "num": 6,
+        "name": "department",
+        "title": "Department",
+        "type": "selectDepartments",
+        "editable": true,
+        "width": 76
+      }
+    ],
+    "data": [
+      {
+        "id": 1,
+        "birthday": "1975-04-12",
+        "phone": "915 175-55-62",
+        "department": 2,
+        "firstName": "Vasiliy",
+        "lastName": "Pechkin"
+      },
+      {
+        "id": 2,
+        "birthday": "1980-12-22",
+        "phone": "495-174-22-43",
+        "department": 4,
+        "firstName": "Dmitry",
+        "lastName": "Ivanov ",
+        "select": false
+      },
+      {
+        "id": 3,
+        "birthday": "2018-01-09",
+        "phone": "495 223-45-78",
+        "department": 6,
+        "firstName": "Roman",
+        "lastName": "Iignatiev"
+      },
+      {
+        "id": 5,
+        "birthday": "1999-01-14",
+        "phone": "371-88-09",
+        "department": 5,
+        "firstName": "Alexander",
+        "lastName": "Makeev"
+      },
+      {
+        "id": 6,
+        "birthday": "2004-12-30",
+        "phone": "945 77 88",
+        "department": 4,
+        "firstName": "Alex1",
+        "lastName": "Rostman"
+      }
+    ],
+    "edit": {
+      "id": 1,
+      "name": "lastName"
+    },
+    "saving": false
+  }
+}
