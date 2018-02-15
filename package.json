@@ -1,10 +1,20 @@
 {
   "name": "react-and-bootstrap",
   "version": "1.0.0",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
+  },
   "description": "An example of how to build static website using bootstrap",
   "scripts": {
     "start": "npm run dev",
-    "build": "webpack -p --display-error-details --color --watch",
+    "build": "webpack -p --display-error-details --color ",
     "server": "node ./server/server.js",
     "dev": "npm run server | npm run build"
   },
@@ -35,7 +45,6 @@
     "react": "^16.2.0",
     "react-datepicker": "^1.1.0",
     "react-dom": "^16.2.0",
-    "react-motion": "^0.5.2",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
