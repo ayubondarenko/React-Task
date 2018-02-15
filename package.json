@@ -15,8 +15,7 @@
   "scripts": {
     "start": "npm run server",
     "build": "webpack -p --display-error-details --color ",
-    "server": "node ./server/server.js",
-    "dev": "npm run server "
+    "server": "node ./server/server.js"
   },
   "license": "MIT",
   "devDependencies": {
