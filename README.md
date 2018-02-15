@@ -7,6 +7,8 @@ This is a small client-server application where:
 
 To install: npm instal
 
+To build: npm run build
+
 To start: npm start
 
 Then go to the /dist/index.ntml 
