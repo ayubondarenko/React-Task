@@ -5,6 +5,8 @@ This is a small client-server application where:
 
   Back-End: JSON Server
   
+ [pic 1] (https://github.com/ayubondarenko/React-Task/blob/master/readMePic/rdm1.png)
+  
 In terminal go to [project folder]
 
     1: npm instal
