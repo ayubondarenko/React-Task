@@ -24,7 +24,7 @@ export default class DateCell extends Component {
         this.value.locale('ru');
         return (
             <div style={{width: '100%'}} onClick={this.onClick.bind(this)}>
-                { this.props.isEdit || this.props.value === '' ?
+                { this.props.isEdit  ?
                     <DatePicker
                         style={{width: '100%'}}
                         ref={(DatePicker) => {

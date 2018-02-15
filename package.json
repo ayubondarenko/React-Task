@@ -13,9 +13,10 @@
   },
   "description": "An example of how to build static website using bootstrap",
   "scripts": {
-    "start": "npm run server",
-    "build": "webpack -p --display-error-details --color ",
-    "server": "node ./server/server.js"
+    "start": "npm run dev",
+    "build": "webpack -p --display-error-details --color --watch",
+    "server": "node ./server/server.js",
+    "dev": "npm run server | npm run build"
   },
   "license": "MIT",
   "devDependencies": {

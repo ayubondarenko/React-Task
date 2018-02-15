@@ -131,8 +131,12 @@ export default function employees(state = {data: []}, action) {
     }
 
     if (action.type === 'ADD_EMPLOYEE_ROW') {
+        let maxId = 0;
+        state.data.map(d =>{
+            if(maxId<d.id) maxId=d.id;
+        });
         const newData = [...state.data, {
-            id: state.data[state.data.length - 1].id + 1,
+            id: maxId + 1,
             firstName: '',
             lastName: '',
             birthday: '',

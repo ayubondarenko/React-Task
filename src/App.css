@@ -37,6 +37,7 @@
     border: none;
     float: none;
     padding-top: 10px;
+    cursor: pointer;
 }
 
 .resize-button {

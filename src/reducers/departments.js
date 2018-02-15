@@ -5,7 +5,6 @@
 export default function departments(state = {data: []}, action) {
 
 
-
     if (action.type === 'SET_DEPARTMENTS_COL') {
         const newColumns = state.columns.map((col) => {
             if (col.name === action.payload.col.name) {
@@ -15,7 +14,7 @@ export default function departments(state = {data: []}, action) {
                 return newCol;
             } else return col;
         });
-        return {...state, columns: newColumns};
+        return {...state, columns: newColumns, edit: {}};
     }
 
     if (action.type === 'MOVE_DEPARTMENTS_COL') {
@@ -29,7 +28,7 @@ export default function departments(state = {data: []}, action) {
                 return newCol;
             } else return col;
         });
-        return {...state, columns: newColumns};
+        return {...state, columns: newColumns, edit: {}};
     }
 
     if (action.type === 'SORT_DEPARTMENTS_COL') {
@@ -66,13 +65,13 @@ export default function departments(state = {data: []}, action) {
                 if (a[action.payload.name] < b[action.payload.name]) return -1 * sortOrder;
                 return 0;
             });
-        return Object.assign({}, state, {sort: sort});
+        return Object.assign({}, state, {sort: sort}, {edit: {}});
     }
     if (action.type === 'FETCH_DEPARTMENTS_SUCCESS') {
         return action.payload;
     }
     if (action.type === 'SAVE_DEPARTMENTS') {
-        return Object.assign({}, state, {saving: true});
+        return Object.assign({}, state, {saving: true}, {edit: {}});
     }
     if (action.type === 'SAVE_DEPARTMENTS_SUCCESS') {
         // console.log("сохранениен сотрудников начато", action);
@@ -117,15 +116,20 @@ export default function departments(state = {data: []}, action) {
             } else return row;
         });
         // return Object.assign({}, state, {data:newData}, {edit:{id:-1, name:''}});
-        return {...state, data: newData, edit: {id: -1, name: ''}}
+        return {...state, data: newData, edit: {}}
     }
 
     if (action.type === 'ADD_DEPARTMENT_ROW') {
+        let maxId = 0;
+        state.data.map(d =>{
+            if(maxId<d.id) maxId=d.id;
+        });
+
         const newData = [...state.data, {
-            id: state.data[state.data.length - 1].id + 1,
+            id: maxId + 1,
             name: ''
         }];
-        return {...state, data: newData}
+        return {...state, data: newData, edit: {}}
     }
 
     if (action.type === 'DELETE_DEPARTMENT_ROWS') {
@@ -145,7 +149,7 @@ export default function departments(state = {data: []}, action) {
             })
         }
         // return Object.assign({}, state, {data: newData});
-        return {...state, data: newData};
+        return {...state, data: newData, edit: {}};
     }
     return state;
 }

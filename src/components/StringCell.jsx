@@ -29,7 +29,7 @@ export default class StringCell extends Component {
 
             <div style={{width: 'inherit'}}
                  onClick={this.onClick.bind(this)}>
-                { this.props.isEdit || this.props.value === '' ?
+                { this.props.isEdit  ?
                     <input style={{width: '100%'}} type='text'
                            class="form-control"
                            id={this.props.id}
