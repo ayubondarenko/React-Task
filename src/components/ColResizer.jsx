@@ -52,7 +52,9 @@ export default class ColResizer extends Component {
 
     render() {
         return (
-            <div class="ml-auto btn-xs resize-button  glyphicon glyphicon-resize-horizontal"
+            <div class="ml-auto btn-xs resize-button
+            glyphicon glyphicon-resize-horizontal "
+                 data-toggle="tooltip" data-placement="bottom" title="resize"
                  onMouseDown={this.handleMouseDown}
                  onDoubleClick={this.onDoubleClick}
             >

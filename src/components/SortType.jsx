@@ -24,8 +24,9 @@ export default class SortType extends Component {
 
         return (
             <div class={'sort-button btn-xs ' + this.pictureClass}
-                    aria-hidden="true"
-                    onClick={(evt) => this.onClick(evt)}>
+                 aria-hidden="true"
+                 data-toggle="tooltip" data-placement="bottom" title="sort"
+                 onClick={(evt) => this.onClick(evt)}>
             </div>
         )
     }
