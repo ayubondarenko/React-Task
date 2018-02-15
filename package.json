@@ -13,7 +13,7 @@
   },
   "description": "An example of how to build static website using bootstrap",
   "scripts": {
-    "start": "npm run dev",
+    "start": "npm run server",
     "build": "webpack -p --display-error-details --color ",
     "server": "node ./server/server.js",
     "dev": "npm run server "
