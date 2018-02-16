@@ -15,5 +15,5 @@ In terminal go to [project folder]
 
     3: npm start
 
-    4: open in browser [project path]/dist/index.ntml 
+    4: open in browser http://localhost:3004
 
